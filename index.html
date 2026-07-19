@@ -69,8 +69,10 @@ section{padding:56px 0}
 .grid{display:grid;gap:26px;grid-template-columns:1fr}
 @media(min-width:700px){.grid{grid-template-columns:1fr 1fr}}
 .card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column}
-.gallery{position:relative;aspect-ratio:4/3;background:#F8FAFC;overflow:hidden}
-.gallery img.main{width:100%;height:100%;object-fit:cover}
+.gallery{position:relative;aspect-ratio:4/3;background:#F1F5F9;overflow:hidden}
+/* 同图模糊铺底：手机竖拍图与官方横图混排时都能完整显示、不切车 */
+.gallery::before{content:"";position:absolute;inset:-10%;background-image:var(--bg);background-size:cover;background-position:center;filter:blur(28px) saturate(1.15);opacity:.62}
+.gallery img.main{position:relative;width:100%;height:100%;object-fit:contain}
 .save-badge{position:absolute;top:14px;left:14px;background:var(--deal);color:#fff;font-family:'Rubik';font-weight:900;font-size:1rem;padding:8px 13px;border-radius:9px;box-shadow:0 2px 8px rgba(185,28,28,.4)}
 .cond-badge{position:absolute;top:14px;right:14px;background:rgba(15,23,42,.85);color:#fff;font-weight:700;font-size:.78rem;padding:6px 11px;border-radius:999px}
 .thumbs{display:flex;gap:8px;padding:10px 14px 0}
@@ -195,12 +197,12 @@ footer .logo{justify-content:center;font-size:1.2rem;margin-bottom:8px}
       <!-- S1 -->
       <article class="card" id="s1">
         <div class="gallery">
-          <img class="main" src="img/s1-1.jpg" alt="Snapcycle S1 folding fat tire e-bike" width="1400" height="1050">
+          <img class="main" src="img/s1-1.jpg" alt="The actual used Snapcycle S1 folding fat tire e-bike for sale, photographed in Winter Garden FL" width="1060" height="1405">
           <span class="save-badge">SAVE 72%</span>
           <span class="cond-badge">Used · Test Ride First</span>
         </div>
         <div class="thumbs" aria-label="Snapcycle S1 photos">
-          <img src="img/s1-1.jpg" class="on" alt="S1 view 1" loading="lazy"><img src="img/s1-2.jpg" alt="S1 view 2" loading="lazy"><img src="img/s1-3.jpg" alt="S1 view 3" loading="lazy"><img src="img/s1-4.jpg" alt="S1 view 4" loading="lazy"><img src="img/s1-5.jpg" alt="S1 view 5" loading="lazy">
+          <img src="img/s1-1.jpg" class="on" alt="S1 side view" loading="lazy"><img src="img/s1-2.jpg" alt="S1 from the other side" loading="lazy"><img src="img/s1-3.jpg" alt="S1 second angle" loading="lazy">
         </div>
         <div class="card-body">
           <h3>Snapcycle S1 E-Bike</h3>
@@ -232,7 +234,7 @@ footer .logo{justify-content:center;font-size:1.2rem;margin-bottom:8px}
             <a class="btn btn-primary" href="sms:+14078018648">Text About This Bike</a>
             <a class="btn btn-outline" href="mailto:chris@snapcycle.com?subject=XBOLTZ%20—%20Snapcycle%20S1%20%24499">Email Instead</a>
           </div>
-          <p class="fine">Photos shown are manufacturer images — ask for real photos of this used bike. Inspect &amp; test ride before you pay.</p>
+          <p class="fine">Photos are of the actual bike you'd be buying — not stock images. Inspect &amp; test ride before you pay.</p>
         </div>
       </article>
 
@@ -334,12 +336,12 @@ footer .logo{justify-content:center;font-size:1.2rem;margin-bottom:8px}
       <!-- Air Max -->
       <article class="card" id="airmax">
         <div class="gallery">
-          <img class="main" src="img/airmax-1.jpg" alt="Mihogo Air Max carbon fiber e-bike" width="1400" height="1050" loading="lazy">
+          <img class="main" src="img/airmax-1.jpg" alt="The actual used Mihogo Air Max carbon fiber e-bike for sale, photographed in Winter Garden FL" width="1060" height="1405" loading="lazy">
           <span class="save-badge">SAVE 50%</span>
           <span class="cond-badge">Used · Test Ride First</span>
         </div>
         <div class="thumbs" aria-label="Mihogo Air Max photos">
-          <img src="img/airmax-1.jpg" class="on" alt="Air Max view 1" loading="lazy"><img src="img/airmax-2.jpg" alt="Air Max view 2" loading="lazy"><img src="img/airmax-3.jpg" alt="Air Max view 3" loading="lazy"><img src="img/airmax-4.jpg" alt="Air Max view 4" loading="lazy"><img src="img/airmax-5.jpg" alt="Air Max view 5" loading="lazy">
+          <img src="img/airmax-1.jpg" class="on" alt="Air Max side view" loading="lazy"><img src="img/airmax-2.jpg" alt="Air Max from the other side" loading="lazy"><img src="img/airmax-3.jpg" alt="Air Max rear view" loading="lazy">
         </div>
         <div class="card-body">
           <h3>Mihogo Air Max — Carbon Fiber E-Bike</h3>
@@ -367,7 +369,7 @@ footer .logo{justify-content:center;font-size:1.2rem;margin-bottom:8px}
             <a class="btn btn-primary" href="sms:+14078018648">Text About This Bike</a>
             <a class="btn btn-outline" href="mailto:chris@snapcycle.com?subject=XBOLTZ%20—%20Mihogo%20Air%20Max%20%24899">Email Instead</a>
           </div>
-          <p class="fine">Photos shown are manufacturer images — ask for real photos of this used bike. Inspect &amp; test ride before you pay.</p>
+          <p class="fine">Photos are of the actual bike you'd be buying — not stock images. Inspect &amp; test ride before you pay.</p>
         </div>
       </article>
 
@@ -446,7 +448,7 @@ footer .logo{justify-content:center;font-size:1.2rem;margin-bottom:8px}
     </div>
     <details>
       <summary>Are these bikes new or used?</summary>
-      <p class="a">Both, and every listing says which. The <strong>Snapcycle Storm</strong> is brand new in an unopened factory box (pink, grey or silver), and the <strong>Pegasus Lite</strong> is brand new. The <strong>Snapcycle S1</strong> and <strong>Mihogo Air Max</strong> are used. The photos shown for those two are manufacturer images of the model — ask us and we'll send real photos of the actual bike before you drive out. Either way you inspect and test ride the exact bike before paying.</p>
+      <p class="a">Both, and every listing says which. The <strong>Snapcycle Storm</strong> is brand new in an unopened factory box (pink, grey or silver), and the <strong>Pegasus Lite</strong> is brand new. The <strong>Snapcycle S1</strong> and <strong>Mihogo Air Max</strong> are used — and the photos on those two are of the actual bike you'd be buying, shot here in Winter Garden, not stock images. Either way you inspect and test ride the exact bike before paying.</p>
     </details>
     <details>
       <summary>How does the free delivery + test ride work?</summary>
@@ -499,10 +501,14 @@ footer .logo{justify-content:center;font-size:1.2rem;margin-bottom:8px}
 
 <script>
 document.querySelectorAll('.card').forEach(card=>{
-  const main=card.querySelector('.gallery img.main');
+  const gallery=card.querySelector('.gallery');
+  const main=gallery.querySelector('img.main');
+  const setBg=src=>gallery.style.setProperty('--bg',`url("${src}")`);
+  setBg(main.getAttribute('src'));
   card.querySelectorAll('.thumbs img').forEach(t=>{
     t.addEventListener('click',()=>{
       main.src=t.src;
+      setBg(t.getAttribute('src'));
       card.querySelectorAll('.thumbs img').forEach(x=>x.classList.remove('on'));
       t.classList.add('on');
     });
@@ -557,7 +563,7 @@ document.querySelectorAll('.card').forEach(card=>{
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
-    {"@type":"Question","name":"Are these bikes new or used?","acceptedAnswer":{"@type":"Answer","text":"Both, and every listing says which. The Snapcycle Storm is brand new in an unopened factory box (pink, grey or silver), and the Pegasus Lite is brand new. The Snapcycle S1 and Mihogo Air Max are used. The photos shown for those two are manufacturer images of the model — ask us and we'll send real photos of the actual bike before you drive out. Either way you inspect and test ride the exact bike before paying."}},
+    {"@type":"Question","name":"Are these bikes new or used?","acceptedAnswer":{"@type":"Answer","text":"Both, and every listing says which. The Snapcycle Storm is brand new in an unopened factory box (pink, grey or silver), and the Pegasus Lite is brand new. The Snapcycle S1 and Mihogo Air Max are used — and the photos on those two are of the actual bike you'd be buying, shot here in Winter Garden, not stock images. Either way you inspect and test ride the exact bike before paying."}},
     {"@type":"Question","name":"How does the free delivery and test ride work?","acceptedAnswer":{"@type":"Answer","text":"If you're within roughly 2-3 hours of the Orlando area, we drive the bike to you. You test ride it at your door. Love it? Pay on the spot. Don't? We take it back — zero cost to you."}},
     {"@type":"Question","name":"How do I pay?","acceptedAnswer":{"@type":"Answer","text":"Cash or Zelle, in person only — at pickup or delivery, after your test ride. No online payment is taken on this site, ever, and we will never ask you to send money before you have seen the bike in person. If a site that looks like ours asks for your card details, or anyone asks you to wire a deposit up front to hold a bike, it is not us."}},
     {"@type":"Question","name":"Where exactly are you located?","acceptedAnswer":{"@type":"Answer","text":"Winter Garden, FL (west Orlando metro). For safety we share exact meeting details when you reserve a bike."}},
