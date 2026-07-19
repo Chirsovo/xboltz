@@ -85,6 +85,8 @@ section{padding:56px 0}
 .save-line{background:#FEF3C7;color:#92400E;font-weight:800;font-size:.85rem;padding:4px 10px;border-radius:6px}
 .chips{display:flex;gap:8px;flex-wrap:wrap;list-style:none}
 .chips li{background:var(--bg);border:1px solid var(--border);border-radius:7px;padding:5px 10px;font-size:.83rem;font-weight:700;color:#7C2D12}
+.stock{display:inline-flex;align-items:center;gap:8px;align-self:flex-start;background:#ECFDF5;border:1px solid #A7F3D0;color:#065F46;font-weight:800;font-size:.85rem;padding:6px 12px;border-radius:7px}
+.stock .dot{width:8px;height:8px;border-radius:50%;background:#10B981;flex:none}
 details.specs{border:1px solid var(--border);border-radius:9px;overflow:hidden}
 details.specs summary{cursor:pointer;font-weight:800;padding:12px 15px;background:var(--bg);list-style:none;display:flex;justify-content:space-between;align-items:center}
 details.specs summary::after{content:"+";font-family:'Rubik';font-weight:700;font-size:1.2rem;color:var(--primary)}
@@ -231,12 +233,12 @@ footer .logo{justify-content:center;font-size:1.2rem;margin-bottom:8px}
       <!-- Storm -->
       <article class="card" id="storm">
         <div class="gallery">
-          <img class="main" src="img/storm-1.jpg" alt="Snapcycle Storm folding full suspension fat tire e-bike" width="1400" height="1050" loading="lazy">
+          <img class="main" src="img/storm-1.jpg" alt="Snapcycle Storm folding full suspension fat tire e-bike in silver" width="1400" height="1050" loading="lazy">
           <span class="save-badge">SAVE 67%</span>
           <span class="cond-badge">Brand New · In Box</span>
         </div>
         <div class="thumbs" aria-label="Snapcycle Storm photos">
-          <img src="img/storm-1.jpg" class="on" alt="Storm view 1" loading="lazy"><img src="img/storm-2.jpg" alt="Storm view 2" loading="lazy"><img src="img/storm-3.jpg" alt="Storm view 3" loading="lazy"><img src="img/storm-4.jpg" alt="Storm view 4" loading="lazy"><img src="img/storm-5.jpg" alt="Storm view 5" loading="lazy">
+          <img src="img/storm-1.jpg" class="on" alt="Storm in silver" loading="lazy"><img src="img/storm-2.jpg" alt="Storm in hot pink" loading="lazy"><img src="img/storm-3.jpg" alt="Storm in grey" loading="lazy"><img src="img/storm-4.jpg" alt="Storm silver front three-quarter view" loading="lazy"><img src="img/storm-5.jpg" alt="Storm silver front view" loading="lazy">
         </div>
         <div class="card-body">
           <h3>Snapcycle Storm E-Bike</h3>
@@ -246,6 +248,7 @@ footer .logo{justify-content:center;font-size:1.2rem;margin-bottom:8px}
             <span class="msrp">MSRP $2,699</span>
             <span class="save-line">YOU SAVE $1,800</span>
           </div>
+          <p class="stock"><span class="dot"></span>In stock: 5 Hot Pink · 5 Grey · 4 Silver</p>
           <ul class="chips">
             <li>750W (1,056W peak)</li><li>48V 15Ah EVE</li><li>30–45 mi range</li><li>Full suspension</li><li>Pink · Grey · Silver</li>
           </ul>
@@ -285,14 +288,15 @@ footer .logo{justify-content:center;font-size:1.2rem;margin-bottom:8px}
         </div>
         <div class="card-body">
           <h3>Snapcycle Pegasus Lite E-Bike</h3>
-          <p class="sub">26" step-thru fat tire cruiser — easy on, easy ride</p>
+          <p class="sub">26" step-thru fat tire cruiser — brand new, easy on, easy ride</p>
           <div class="price-row">
             <span class="price">$699</span>
             <span class="msrp">MSRP $1,999</span>
             <span class="save-line">YOU SAVE $1,300</span>
           </div>
+          <p class="stock"><span class="dot"></span>In stock: 13 in Tiffany Blue</p>
           <ul class="chips">
-            <li>500W hub motor</li><li>48V 15Ah EVE</li><li>20–45 mi range</li><li>Step-thru frame</li>
+            <li>500W hub motor</li><li>48V 15Ah EVE</li><li>20–45 mi range</li><li>Step-thru frame</li><li>Tiffany Blue</li>
           </ul>
           <details class="specs">
             <summary>Full Specs</summary>
@@ -307,6 +311,8 @@ footer .logo{justify-content:center;font-size:1.2rem;margin-bottom:8px}
               <tr><td>Display</td><td>Color LCD, backlit, adjustable angle</td></tr>
               <tr><td>Gears</td><td>7-speed Shimano Tourney</td></tr>
               <tr><td>Weight / payload</td><td>76.7 lbs / 330 lbs max</td></tr>
+              <tr><td>Color</td><td>Tiffany Blue</td></tr>
+              <tr><td>Condition</td><td>Brand new</td></tr>
               <tr><td>Charging</td><td>7–8 hours</td></tr>
             </table>
           </details>
@@ -499,7 +505,7 @@ document.querySelectorAll('.card').forEach(card=>{
   "itemListElement": [
     {"@type":"Product","position":1,"name":"Snapcycle S1 E-Bike (Used, Clearance)","image":"https://xboltz.com/img/s1-1.jpg","description":"Used folding fat tire e-bike, 750W motor, 48V 14Ah Samsung battery, 30-45 mi range.","itemCondition":"https://schema.org/UsedCondition","offers":{"@type":"Offer","price":"499","priceCurrency":"USD","itemCondition":"https://schema.org/UsedCondition","availability":"https://schema.org/InStock","areaServed":"Florida"}},
     {"@type":"Product","position":2,"name":"Snapcycle Storm E-Bike (Brand New, Clearance)","image":"https://xboltz.com/img/storm-1.jpg","description":"Brand new boxed folding full-suspension fat tire e-bike, 750W motor, 48V 15Ah battery, TEKTRO hydraulic brakes. Pink, grey or silver.","itemCondition":"https://schema.org/NewCondition","color":"Pink, Grey, Silver","offers":{"@type":"Offer","price":"899","priceCurrency":"USD","itemCondition":"https://schema.org/NewCondition","availability":"https://schema.org/InStock","areaServed":"Florida"}},
-    {"@type":"Product","position":3,"name":"Snapcycle Pegasus Lite E-Bike (Brand New, Clearance)","image":"https://xboltz.com/img/pegasus-1.jpg","description":"Brand new 26 inch step-thru fat tire e-bike, 500W motor, hydraulic brakes, 20-45 mi range.","itemCondition":"https://schema.org/NewCondition","offers":{"@type":"Offer","price":"699","priceCurrency":"USD","itemCondition":"https://schema.org/NewCondition","availability":"https://schema.org/InStock","areaServed":"Florida"}},
+    {"@type":"Product","position":3,"name":"Snapcycle Pegasus Lite E-Bike (Brand New, Clearance)","image":"https://xboltz.com/img/pegasus-1.jpg","description":"Brand new 26 inch step-thru fat tire e-bike in Tiffany Blue, 500W motor, hydraulic brakes, 20-45 mi range.","itemCondition":"https://schema.org/NewCondition","color":"Tiffany Blue","offers":{"@type":"Offer","price":"699","priceCurrency":"USD","itemCondition":"https://schema.org/NewCondition","availability":"https://schema.org/InStock","areaServed":"Florida"}},
     {"@type":"Product","position":4,"name":"Mihogo Air Max Carbon Fiber E-Bike (Used, Clearance)","image":"https://xboltz.com/img/airmax-1.jpg","description":"Used Toray T800 carbon fiber e-bike, 750W, dual battery 921.6Wh, up to 121 mi range.","itemCondition":"https://schema.org/UsedCondition","offers":{"@type":"Offer","price":"899","priceCurrency":"USD","itemCondition":"https://schema.org/UsedCondition","availability":"https://schema.org/InStock","areaServed":"Florida"}}
   ]
 }
