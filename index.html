@@ -578,5 +578,9 @@ document.querySelectorAll('.card').forEach(card=>{
 }
 </script>
 
+<script>
+// GA4: count Text / Call / Email taps per bike, so inquiries show up in reports
+document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href^="sms:"],a[href^="tel:"],a[href^="mailto:"]');if(!a||typeof gtag!=='function')return;var c=a.closest('article.card');gtag('event','contact_click',{method:a.getAttribute('href').split(':')[0],bike:c?c.id:'general',transport_type:'beacon'});});
+</script>
 </body>
 </html>
